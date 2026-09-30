@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Nossa ONG</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header>
+        <div class="logo-container">
+            <img src="../imagens/logo.png" alt="Logotipo da ONG" width="150">
+        </div>
+        <nav class="navbar" aria-label="Navegação Principal">
+            <button type="button" class="hamburger" id="btnHamburger"
+                    aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menuPrincipal">
+                <li><a href="#/inicio" data-rota="inicio">Início</a></li>
+                <li class="dropdown">
+                    <a href="#/projetos" data-rota="projetos">Projetos</a>
+                    <ul class="submenu">
+                        <li><a href="#/projetos" data-rota="projetos">Campanhas e impacto</a></li>
+                        <li><a href="#/voluntariado" data-rota="voluntariado">Voluntariado</a></li>
+                    </ul>
+                </li>
+                <li><a href="#/contato" data-rota="contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Área onde o JavaScript injeta cada tela -->
+    <main class="container" id="conteudo" tabindex="-1"></main>
+
+    <footer>
+        <p>&copy; 2026 Nossa ONG - Todos os direitos reservados.</p>
+        <p>Endereço: São Paulo - SP | E-mail: contato@ong.org.br</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="modal">
+            <h2 id="modalTitulo">Como funciona o voluntariado?</h2>
+            <p>Preencha seus dados no formulário. A equipe da ONG entrará em contato com as próximas orientações.</p>
+            <button type="button" class="btn" id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+    <script type="module" src="../js/script.js"></script>
+</body>
+</html>
